@@ -29,7 +29,7 @@ env:
   FREE_UP_DISK: false
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: true
-  UPLOAD_FIRMWARE: true
+  UPLOAD_FIRMWARE: false
   TZ: Asia/Shanghai
 
 jobs:
