@@ -18,8 +18,8 @@ on:
       - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-#  watch:
-#    types: [started]
+watch:
+    types: [started]
 
 env:
   REPO_URL: https://github.com/Lienol/lean-lede
@@ -105,7 +105,11 @@ jobs:
       with:
         name: OpenWrt_directory
         path: openwrt/bin
-
+  
+    - name: SSH connection to filetra
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
+    
     - name: Organize files
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
