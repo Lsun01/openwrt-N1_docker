@@ -106,9 +106,9 @@ jobs:
         name: OpenWrt_directory
         path: openwrt/bin
   
-    - name: SSH connection to filetra
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
+   # - name: SSH connection to filetra
+   #   uses: P3TERX/debugger-action@master
+   #   if: env.SSH_ACTIONS == 'true'
     
     - name: Organize files
       id: organize
